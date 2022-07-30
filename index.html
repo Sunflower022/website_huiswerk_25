@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="An Bex">
+    <meta name="description" content="Webdesign uitwerking huiswerk les 25">
+    <meta name="keywords" content="webdesign huiswerk les 25 NHA">
+    <title>Huiswerk les 25</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $("#toon").hide();
+        $("#toon_geleidelijk").hide();
+        $("#naar_onder").hide();
+
+        $("#verberg").click(function(){
+          $("p").hide();
+          $("#toon").show();
+          $("#toon_geleidelijk").show();
+          $("#verberg").hide();
+          $("#verberg_geleidelijk").hide();
+          $("#naar_boven").hide();
+          $("#naar_onder").hide();
+        });
+        $("#verberg_geleidelijk").click(function(){
+          $("p").fadeOut();
+          $("#toon").show();
+          $("#toon_geleidelijk").show();
+          $("#verberg").hide();
+          $("#verberg_geleidelijk").hide();
+          $("#naar_boven").hide();
+          $("#naar_onder").hide();
+        });
+        $("#toon").click(function(){
+          $("p").show();
+          $("#toon").hide();
+          $("#toon_geleidelijk").hide();
+          $("#verberg").show();
+          $("#verberg_geleidelijk").show();
+          $("#naar_boven").show();
+          $("#naar_onder").hide();
+        });
+        $("#toon_geleidelijk").click(function(){
+          $("p").fadeIn();
+          $("#toon").hide();
+          $("#toon_geleidelijk").hide();
+          $("#verberg").show();
+          $("#verberg_geleidelijk").show();
+          $("#naar_boven").show();
+          $("#naar_onder").hide();
+        });
+        $("#naar_boven").click(function(){
+          $("p").slideUp();
+          $("#naar_boven").hide();
+          $("#naar_onder").show();
+        });
+        $("#naar_onder").click(function(){
+          $("p").slideDown();
+          $("#naar_boven").show();
+          $("#naar_onder").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h3>Uitwerking huiswerk les 25</h3>
+    <form>
+      <br>
+      <p>Deze tekst kan worden verborgen en weer getoond.</p>
+      <button type="button" name="verberg" id="verberg">Verberg</button>
+      <button type="button" name="verberg_geleidelijk" id="verberg_geleidelijk">Verberg geleidelijk</button>
+      <button type="button" name="toon" id="toon">Toon</button>
+      <button type="button" name="toon_geleidelijk" id="toon_geleidelijk">Toon geleidelijk</button>
+      <button type="button" name="naar_boven" id="naar_boven">Schuif naar boven</button>
+      <button type="button" name="naar_onder" id="naar_onder">Schuif naar onder</button>
+    </form>
+    <noscript>
+      Om deze website optimaal te kunnen gebruiken is het noodzakelijk om JavaScript te activeren.
+    </noscript>
+  </body>
+</html>

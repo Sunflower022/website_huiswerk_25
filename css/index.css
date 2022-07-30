@@ -1,0 +1,15 @@
+* {
+  background-color: lavender;
+}
+
+h3{
+  color: mediumpurple;
+}
+
+button{
+  border-radius: 12px;
+  background-color: violet;
+  color: white;
+  height: 40px;
+  border: 1px solid silver;
+}
